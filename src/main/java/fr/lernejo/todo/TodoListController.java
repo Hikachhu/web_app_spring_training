@@ -1,7 +1,10 @@
 package fr.lernejo.todo;
 
+import org.springframework.web.bind.annotation.*;
+
 import java.util.ArrayList;
 
+@RestController
 public class TodoListController {
 
 
@@ -13,7 +16,8 @@ public class TodoListController {
     }
 
     @GetMapping(value = "/api/todo")
-    public @ResponseBody ArrayList<Todo> getTodoList(){
+    public @ResponseBody
+    ArrayList<Todo> getTodoList(){
         return this.todoArrayList;
     }
 
